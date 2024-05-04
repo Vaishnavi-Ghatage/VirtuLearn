@@ -8,6 +8,10 @@ body{
     background-color: rgb(34, 32, 32);
 }
 nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
     display: flex;
     justify-content: space-between;
    padding: 20px;
@@ -36,9 +40,15 @@ a{
     text-align: center;
     height: 70vh;
     align-items: center;
+    margin-top: 20px;
+}
+.immg{
+  mix-blend-mode: screen;
 }
 img{
     width:25rem;
+    
+    
 }
 .cnt{
     background-color: rgb(49, 44, 44);
@@ -53,8 +63,9 @@ img{
     gap: 10px;
     justify-content: space-around;
     text-align: center;
-    margin-top: 10px;
     margin: 10px;
+    margin-top: 25px;
+   
 }
 .boxx{
     display: flex;
@@ -80,6 +91,7 @@ label,input{
 }
 form{
     margin-left: 5%;
+    padding-bottom: 20px;
 }
 input{
     height: 30px;
@@ -98,7 +110,7 @@ option{
     text-align: center;
     height: 75vh;
     align-items: center;
-    
+   
 }
 #contact{
     background-color: rgb(49, 44, 44);
@@ -148,7 +160,11 @@ h2{
     height: 60px;
     border-radius: 50%;
   }
-  .card-body{
+  /* .card p{
+    font-size:15px;
+    font-weight: lighter;
+  } */
+  .card-body1{
     display: flex;
     justify-content: space-around;
     padding-top: 10px;
@@ -178,7 +194,7 @@ h2{
   .card2  {
     flex: 0 0 auto;
     width: 18rem;
-    height: 20rem;
+    height: 25rem;
     scroll-snap-align: start;
     margin-right: 1rem;
     transition: transform 0.3s ease;
@@ -194,7 +210,7 @@ h2{
   .card2 img {
     width: 95%;
     height: auto;
-    padding-top: 20px;
+    padding-top: 15px;
   }
   .dots-container1 {
     
@@ -235,4 +251,52 @@ h2{
   }
 .card p{
     margin: 10px 0;
+    font-size:15px;
+    font-weight: lighter;
+}
+.card-body h3{
+  text-align: center;
+}
+.newNav{
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+@media (max-width:900px){
+  .cont2{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      /* grid-template-rows: 1fr 1fr 1fr; */
+  }
+  input{
+    width: 90%;
+  }
+}
+@media (max-width:600px){
+  .cont2{
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 0 2%;
+      /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; */
+  }
+  .cont3{
+    display: block;
+    margin-bottom: 120px;
+  }
+  .cont7{
+    display: block;
+  }
+  .newNav{
+    display: flex;
+  }
+  .links{
+    display: none;
+  }
+
+}
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 3px 0;
 }
